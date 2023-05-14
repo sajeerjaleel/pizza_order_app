@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the "{}" from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+salami_combo_order:
+  id: f40d59d0-48bd-409a-ac7b-54a1b47f6680
+  state: 0
+  discount_id: 1
+
+two:
+  id: 9232679d-e3fd-40bd-81f4-7114ea96e420
+  state: 1
+  discount_id: 1
+
+open_order:
+  state: 0
+
+complete_order:
+  state: 1

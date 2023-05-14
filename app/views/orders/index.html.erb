@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag 'custom_styles' %>
+<% if flash[:notice] %>
+	<div class="alert alert-success">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+
+<h1>Orders</h1>
+<hr>
+<% @orders.each do |order| %>
+	<div class="section-container">
+		<div class="section1">
+		  <p>ID : <%= order.id %></p>
+		  <p>Created : <%= order_created_at(order) %></p>
+		  <p>Promotion Codes : <%= order_promotion_codes(order) %></p>
+		  <p>Discount Codes : <%= order_discount_code(order) %></p>
+		  <br>
+		  <p>Total Price : <%= order_total_price(order) %></p>
+		  <p><%= button_to 'Complete', order_path(order), method: :patch %></p>
+		</div>
+		<div class="section2">
+		  <p>Items</p>
+		  <ul>
+			  <% order.order_pizzas.each do |order_pizza| %>
+			  	<li><%= order_pizza_name(order_pizza) %></li>
+			  	<%= order_toppings(order_pizza) %>
+			  <% end %>
+			</ul>
+		</div>
+	</div>
+	<hr>
+<% end %>
