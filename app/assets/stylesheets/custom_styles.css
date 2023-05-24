@@ -1,0 +1,30 @@
+.section-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section1, .section2, .section3 {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert strong {
+  font-weight: bold;
+}
